@@ -1,6 +1,12 @@
-<div>
+<div class="card">
+
     <% @articles.each do |article| %>
+    
     <h2><%= article[:title] %></h2>
+    
     <%= link_to "View article", article[:url], class:"btn btn-outline-primary"%>
+    <br/>
+    <br/>
     <% end %>
 </div>
+<br/>
