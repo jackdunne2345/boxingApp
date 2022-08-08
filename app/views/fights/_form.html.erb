@@ -1,0 +1,52 @@
+<%= form_with(model: fight) do |form| %>
+  <% if fight.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fight.errors.count, "error") %> prohibited this fight from being saved:</h2>
+
+      <ul>
+        <% fight.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+      <%= form.text_field :blue_corner, autocomplete: "blue_corner",class: 'form-control', autocomplete: "blue_corner", placeholder: 
+    "Blue corner fighter" %>
+  </div>
+<br/>
+ <div>
+      <%= form.text_field :red_corner, autocomplete: "red_corner",class: 'form-control', autocomplete: "red_corner", placeholder: 
+    "Red corner fighter" %>
+  </div>
+<br/>
+  <div>
+      <%= form.date_field :date, autocomplete: "date",class: 'form-control', autocomplete: "date_corner", placeholder: 
+    "Date" %>
+  </div>
+ <br/>
+  <div>
+       <%= form.text_field :competition, autocomplete: "competition",class: 'form-control', autocomplete: "dcompetition_corner", placeholder: 
+     "Competition" %>
+   </div>
+   <br/>
+   <p>Winner</p>
+    <div>
+       <%= form.select :winner, [['Red Corner', 'blue_corner_cont'], ['Blue Corner', 'red_corner_cont']], placeholder: 'Winner', class:"dropdown" %>
+   </div>
+<br/>
+
+  
+
+<!-- this code sets the id number to the cuirrent usser signed in id -->
+    <%= form.number_field :fighter_id, id: :fight_fighter_id, class:"form-control", value: current_fighter.id, type: :hidden%>
+    <%= form.text_field :club, club: :fight_club, class:"form-control", value: current_fighter.club, type: :hidden%>
+  
+    
+  
+<%=%>
+  <div>
+    <%= form.submit "Create", class:"btn btn-primary"%>
+  </div>
+<% end %>

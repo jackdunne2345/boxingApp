@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @fight %>
+
+<div>
+  <%= link_to "Edit this fight", edit_fight_path(@fight), class:'btn btn-primary'%> |
+  <%= link_to "Back to fights", fights_path,class:'btn btn-primary' %>
+ 
+</div>
+</br>
+<div>
+  <%= button_to "Destroy this fight", @fight, method: :delete, class: 'btn btn-danger' %>
+</div>

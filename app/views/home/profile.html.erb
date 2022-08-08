@@ -1,0 +1,14 @@
+<div class="container"> 
+<div class="card">
+  <div class="card-header">
+    <%=current_fighter.email %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Details</h5>
+    <p class="card-text">Club: <%=current_fighter.club %></p>
+    <p class="card-text">Role: <%=current_fighter.role %></p>
+    <p class="card-text">Date made: <%=current_fighter.created_at %></p>
+    <%= link_to "Edit Account", edit_fighter_registration_path,class:"nav-link" %>
+  </div>
+</div>
+</div>
