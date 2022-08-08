@@ -12,7 +12,7 @@ gem "jbuilder"
 gem 'jquery-rails'
 #DEVISE GEM FOR USER MANAGENT
 gem 'devise', '~> 4.8', '>= 4.8.1'
-
+gem "ransack", "~> 3.0"
 
 
 
@@ -57,6 +57,7 @@ end
 
 group :production do
 gem 'pg', '~> 1.1'
+gem "ransack", "~> 3.0"# gem used for search functionality
 gem 'hoe', '~> 3.23', '>= 3.23.1'
 gem 'hoe-bundler', '~> 1.5'
 gem 'hoe-deveiate', '~> 0.10.0'
@@ -84,8 +85,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-# gem used for search functionality
-gem "ransack", "~> 3.0"
+
+
 #cancancan gem is used fopr autorization i didnt end up using this i just wrote a function in the fights controller instead
 gem 'cancancan'
 #gem used for http requests
