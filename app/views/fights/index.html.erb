@@ -3,7 +3,9 @@
 <h1>Fight History</h1>
 
 <div >
-<%= search_form_for @q do |f| %>
+<%= search_form_for(@q, url: "/fights", method: :get) do |f| %>
+
+  
 
   <!--Search if the name field contains...-->
   <%= f.label :blue_corner_cont%>
