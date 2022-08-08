@@ -16,7 +16,7 @@ class HomeController < ApplicationController
       req.params = { 
         apiKey: '983ae5e979cd49258f0d9b577d7f5847',
         sortBy: 'publishedAt',
-        from: '2022-07-07',
+        from: Time.now.strftime("%Y-%m-%d"),
         q: 'boxing'
      }
     end

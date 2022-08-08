@@ -54,11 +54,11 @@ end
       @fight = current_fighter.fights.find_by(id: params[:id])
      @fight1= current_fighter.fights.find_by(club: params[:club])
       if current_fighter.role == 'coach'
-        fight2=2
+        @fight2=2
       else
-        fight2=1
+        @fight2=1
       end
-      redirect_to root_path, notice: "not your fight ayeee?" if @fight.nil? #or  1 == fight2 and @fight1.nil?
+      redirect_to root_path, notice: "not your fight ayeee?" if @fight.nil? ||  (1 == fight2 and @fight1.nil?)
   end
 
   # PATCH/PUT /fights/1 or /fights/1.json

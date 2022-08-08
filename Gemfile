@@ -13,6 +13,7 @@ gem 'jquery-rails'
 #DEVISE GEM FOR USER MANAGENT
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem "ransack", "~> 3.0"
+gem 'ffi', '~> 1.15', '>= 1.15.5'
 
 
 
@@ -56,6 +57,7 @@ gem "sqlite3", "~> 1.4"
 end
 
 group :production do
+gem 'ffi', '~> 1.15', '>= 1.15.5'
 gem 'pg', '~> 1.1'
 gem "ransack", "~> 3.0"# gem used for search functionality
 gem 'hoe', '~> 3.23', '>= 3.23.1'

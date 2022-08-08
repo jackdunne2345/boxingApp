@@ -39,7 +39,7 @@
         <tr>
         
           <% 
-           if fight.fighter == current_fighter or current_fighter.role == 'coach' and current_fighter.club == fight.fighter.club %> 
+           if fight.fighter == current_fighter or (current_fighter.role == 'coach' && current_fighter.club == fight.club) %> 
           <td><%= link_to fight.blue_corner, fight %></td>
           <td>vs</td>
           <td><%= fight.red_corner %></td>
